@@ -1,0 +1,74 @@
+package personalAssignment;
+
+import java.util.Scanner;
+
+public class LabTest1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a, item1, item2, item3;
+		double p1, p2 , p3;
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Welcome to C_MARTS shopping complex");
+		System.out.print("Enter the number of items: ");
+		a = scan.nextInt();
+		System.out.println("Enter price of first item: ");
+		p1 = scan.nextDouble();
+		System.out.println("Enter quantity of first item: ");
+		item1 = scan.nextInt();
+		System.out.println("");
+		System.out.println("Enter price of second item: ");
+		p2 = scan.nextDouble();
+		System.out.println("Enter quantity of second item: ");
+		item2 = scan.nextInt();
+		System.out.println("");
+		System.out.println("Enter price of third item: ");
+		p3 = scan.nextDouble();
+		System.out.println("Enter quantity of third item: ");
+		item3 = scan.nextInt();
+	
+	
+		 double totalprice1 = item1 * p1;
+	     double totalprice2 = item2 * p2;
+	     double totalprice3 = item3 * p3;
+	     double totalprice = totalprice1 + totalprice2 + totalprice3;
+	     
+	     double discount;
+	        if (totalprice > 100 ) {
+	            discount = 0.2 * totalprice;
+	        } else {
+	            discount = 0.1 * totalprice;
+	        }
+	        
+	        double paidprice;
+	        paidprice = totalprice - discount;
+	        
+	        System.out.print("Total price         : RM" + totalprice);
+	        System.out.println("\nDiscount received   : RM" + discount);
+	        System.out.println("Price to paid   : RM" + paidprice);
+		
+		scan.close();
+	}
+
+}
+Output
+Welcome to C_MARTS shopping complex
+Enter the number of items: 3
+Enter price of first item: 
+150
+Enter quantity of first item: 
+2
+
+Enter price of second item: 
+50
+Enter quantity of second item: 
+3
+
+Enter price of third item: 
+30
+Enter quantity of third item: 
+1
+Total price         : RM480.0
+Discount received   : RM96.0
+Price to paid   : RM384.0
