@@ -1,0 +1,56 @@
+package personalAssignment;
+
+import java.util.Scanner;
+
+public class LabTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Phone Kiosk Salary");
+		
+		 Scanner scan = new Scanner(System.in);
+	       
+	       String Employee_name;
+	       int hours_work;
+	       double sales,commission=0,wages,daily_wages;
+	       
+	       System.out.print("Please enter your name: ");
+	       Employee_name = scan.next();
+	       scan.nextLine();
+	       System.out.print("Please enter your hours work: ");
+	       hours_work = scan.nextInt();
+	       System.out.print("Please enter your sales volume: ");
+	       sales = scan.nextDouble();
+	       
+	       wages = hours_work*5;
+	       
+	       if(sales>=300 && sales<=300)
+	       {
+	           commission = sales*0.05;
+	       }
+	       else if(sales>=301 && sales<=500)
+	       {
+	           commission = sales*0.10;
+	       }
+	       else if(sales>500)
+	       {
+	           commission = sales*0.15;
+	       }
+	       
+	       daily_wages = wages + commission;
+	       
+	       System.out.println("Employee's Name : " + Employee_name);
+	       System.out.println("Commission : RM" + commission);
+	       System.out.println("Daily Wages : RM" + daily_wages);
+		
+	}
+
+}
+OUTPUT
+Phone Kiosk Salary
+Please enter your name: Aimel Daniel
+Please enter your hours work: 5
+Please enter your sales volume: 600
+Employee's Name : Aimel
+Commission : RM90.0
+Daily Wages : RM115.0
